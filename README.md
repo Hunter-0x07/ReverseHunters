@@ -8,3 +8,20 @@
 ## 学习路径
 目前以滴水逆向的视频教程做参考，我会将自己的学习心得更新到每一课，帮助踩坑，
 给予课程学习的建议；
+
+教程地址：
+
+链接：https://pan.baidu.com/s/12BwIoS3mZQ3kCEW87Aa5Bw 
+提取码：p3ms 
+
+如果失效了请说一下
+
+## 常见逆向学习论坛：
+```shell
+# 吾爱破解
+https://www.52pojie.cn/
+# 飘云阁
+https://www.chinapyg.com/
+# 看雪
+https://bbs.pediy.com/
+```
