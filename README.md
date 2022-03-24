@@ -14,3 +14,13 @@
 提取码：p3ms 
 
 如果失效了请说一下
+
+## 常见逆向学习论坛：
+```shell
+# 吾爱破解
+https://www.52pojie.cn/
+# 飘云阁
+https://www.chinapyg.com/
+# 看雪
+https://bbs.pediy.com/
+```
