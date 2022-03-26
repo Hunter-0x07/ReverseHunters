@@ -1,5 +1,5 @@
 ---
-homepage: https://hunter-0x07.github.io/ReverseHunters/
+home: true
 ---
 ## 建立初衷
 和志同道合的朋友一起学习逆向工程；
@@ -14,6 +14,9 @@ homepage: https://hunter-0x07.github.io/ReverseHunters/
 [教程地址](https://pan.baidu.com/s/12BwIoS3mZQ3kCEW87Aa5Bw)提取码：p3ms
 
 如果失效了请说一下
+
+## 笔记主页
+https://hunter-0x07.github.io/ReverseHunters/
 
 ## 常见逆向学习论坛：
 ```shell
