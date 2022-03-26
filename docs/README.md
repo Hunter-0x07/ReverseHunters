@@ -8,7 +8,7 @@ home: true
 起点不重要，加入的伙伴一起学习一起奋进；
 
 ## 学习路径
-目前以滴水逆向的视频教程做参考，我会将自己的学习心得更新到每一课，帮助踩坑，
+目前以视频教程做参考，我会将自己的学习心得更新到每一课，帮助踩坑，
 给予课程学习的建议；
 
 [教程地址](https://pan.baidu.com/s/12BwIoS3mZQ3kCEW87Aa5Bw)提取码：p3ms
@@ -23,4 +23,6 @@ https://www.52pojie.cn/
 https://www.chinapyg.com/
 # 看雪
 https://bbs.pediy.com/
+# 滴水
+http://www.dtdebug.com/
 ```
