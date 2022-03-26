@@ -1,5 +1,5 @@
 ---
-home: true
+homepage: https://hunter-0x07.github.io/ReverseHunters/
 ---
 ## 建立初衷
 和志同道合的朋友一起学习逆向工程；
