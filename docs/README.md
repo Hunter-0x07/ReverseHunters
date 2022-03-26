@@ -13,7 +13,8 @@ home: true
 
 [教程地址](https://pan.baidu.com/s/12BwIoS3mZQ3kCEW87Aa5Bw)提取码：p3ms
 
-如果失效了请说一下
+如果教程有侵权，那么十分抱歉；请及时邮箱告知，我及时删除地址，谢谢；
+邮箱地址：dq1270291909@gmail.com
 
 ## 笔记主页
 https://hunter-0x07.github.io/ReverseHunters/
