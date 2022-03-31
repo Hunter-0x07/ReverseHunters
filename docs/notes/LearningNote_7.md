@@ -24,8 +24,7 @@ https://www.bcdaren.com/download/downdesc/452433493411237888
 
 #### 王爽16位汇编语言书籍下载链接
 我觉得可以和课程配套着学：
-链接：https://pan.baidu.com/s/1sUgO8yTp4kvkkccTJngNbA 
-提取码：lv10 
+链接：https://pan.baidu.com/s/10dYKg7h4W6FEAzo5mftEvg 
+提取码：dj92 
 
 MASM：Microsoft Macro Assembler：微软宏汇编器
-

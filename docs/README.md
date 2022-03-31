@@ -30,3 +30,10 @@ https://bbs.pediy.com/
 # 滴水
 http://www.dtdebug.com/
 ```
+
+## 常见逆向学习好书：
+```shell
+# 王爽16位汇编语言第四版书籍下载链接
+链接：https://pan.baidu.com/s/10dYKg7h4W6FEAzo5mftEvg 
+提取码：dj92 
+```
