@@ -1,0 +1,1 @@
+const e={key:"v-e8b6c472",path:"/notes/",title:"1.1.\u7834\u89E3\u7B2C\u4E00\u8BFE",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u5B66\u4E60\u5FC3\u5F97",slug:"\u5B66\u4E60\u5FC3\u5F97",children:[]}],git:{updatedTime:1650343086e3,contributors:[{name:"Hunter-0x07",email:"dq1270291909@gmail.com",commits:1}]},filePathRelative:"notes/README.md"};export{e as data};
