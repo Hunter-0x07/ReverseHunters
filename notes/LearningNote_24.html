@@ -23,7 +23,7 @@
 			}
     </script>
     <title>7.18 王爽汇编语言（十五） | ReverseHunters</title><meta name="description" content="逆向工程">
-    <link rel="modulepreload" href="/ReverseHunters/assets/app.9efba518.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_24.html.6419f854.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_24.html.24cf6529.js"><link rel="modulepreload" href="/ReverseHunters/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="modulepreload" href="/ReverseHunters/assets/app.d2fd7aa5.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_24.html.c3581e51.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_24.html.bf2f413d.js"><link rel="modulepreload" href="/ReverseHunters/assets/plugin-vue_export-helper.21dcd24c.js">
     <link rel="stylesheet" href="/ReverseHunters/assets/style.34f2fdae.css">
   </head>
   <body>
@@ -61,8 +61,17 @@ mov ax, <span class="token punctuation">[</span>bx + <span class="token number">
 （1）通过寄存器名指明要处理的数据长度
 mov ax, <span class="token number">1</span>
 mov bx, ds:<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># bx 寄存器是 16位寄存器，此时是字操作</span>
-（2）
-</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2><p>P165</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: dq1270291909@gmail.com">Hunter-0x07</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"><a href="/ReverseHunters/notes/LearningNote_23.html" class="" aria-label="7.17 王爽汇编语言（十四）"><!--[--><!--]--> 7.17 王爽汇编语言（十四） <!--[--><!--]--></a></span><!----></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
-    <script type="module" src="/ReverseHunters/assets/app.9efba518.js" defer></script>
+
+（2）通过 <span class="token string">&quot;X ptr&quot;</span>的形式指明内存单元的长度，X 在汇编指令中可以为 word 或 byte。
+mov word ptr ds:<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>, <span class="token number">1</span>
+inc word ptr <span class="token punctuation">[</span>bx<span class="token punctuation">]</span>
+<span class="token function">add</span> word ptr <span class="token punctuation">[</span>bx<span class="token punctuation">]</span>, <span class="token number">2</span>
+mov byte ptr ds:<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>, <span class="token number">1</span>
+<span class="token function">add</span> byte ptr <span class="token punctuation">[</span>bx<span class="token punctuation">]</span>, <span class="token number">2</span>
+
+（3）有些指令操作默认就指明了访问的长度
+比如栈的 push 和 pop 操作，默认必须为字操作；
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2><p>p170</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: dq1270291909@gmail.com">Hunter-0x07</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"><a href="/ReverseHunters/notes/LearningNote_23.html" class="" aria-label="7.17 王爽汇编语言（十四）"><!--[--><!--]--> 7.17 王爽汇编语言（十四） <!--[--><!--]--></a></span><!----></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/ReverseHunters/assets/app.d2fd7aa5.js" defer></script>
   </body>
 </html>
