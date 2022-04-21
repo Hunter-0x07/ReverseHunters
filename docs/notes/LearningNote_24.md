@@ -45,8 +45,17 @@ mov ax, [bx + 8]
 （1）通过寄存器名指明要处理的数据长度
 mov ax, 1
 mov bx, ds:[0]  # bx 寄存器是 16位寄存器，此时是字操作
-（2）
+
+（2）通过 "X ptr"的形式指明内存单元的长度，X 在汇编指令中可以为 word 或 byte。
+mov word ptr ds:[0], 1
+inc word ptr [bx]
+add word ptr [bx], 2
+mov byte ptr ds:[0], 1
+add byte ptr [bx], 2
+
+（3）有些指令操作默认就指明了访问的长度
+比如栈的 push 和 pop 操作，默认必须为字操作；
 ```
 
 ## 总结
-P165
+p170
