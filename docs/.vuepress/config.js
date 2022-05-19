@@ -69,7 +69,8 @@ module.exports = {
                                 '/notes/learningNote_37.md',
                                 '/notes/learningNote_38.md',
                                 '/notes/learningNote_39.md',
-                                '/notes/learningNote_40.md'
+                                '/notes/learningNote_40.md',
+                                '/notes/learningNote_41.md'
                             ],
                         },
                     ]
