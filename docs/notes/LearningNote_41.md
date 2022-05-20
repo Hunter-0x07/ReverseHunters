@@ -16,7 +16,7 @@
 
 另外我们可以尝试用 es:di 来定位要写入的显示缓冲区的地址。
 
-初步独立完成的程序如下：（但是实际没有成功），明天再做修改
+初步完成的程序如下：
 ```asm
 ; 在屏幕的 8 行 3 列，用绿色显示 data 段中的字符串
 assume cs:code
@@ -38,43 +38,46 @@ code segment
 main:
     mov dh, 8   ; 行号
     mov dl, 3   ; 列号
-    mov cl, 2   ; 颜色属性
-
-    mov ax, data
-    mov ds, ax  ; 初始化 ds 寄存器
-    mov si, 0   ; ds:si 指向 data 数据段
+    mov cl, 2   ; 颜色
+    
+    mov ax, data   
+    mov ds, ax      
+    mov si, 0      ; 初始化 ds:[si] 指向 'Welcome to masm!'
     call show_str
 
     mov ax, 4c00h
     int 21h
 
 show_str:
-    mov bx, 0   ; bx 用来存放要写入的显示缓冲区的偏移地址
-    mov di, 160
-    mov al, dh
-    mul di      ; 行号 * 160，结果保存到 ax 寄存器
-    add bx, ax
-    mov di, 2
-    mov al, dl
-    mul di      ; 列号 * 2，结果保存到 ax 寄存器
-    add bx, ax  ; bx = 行号 * 160 + 列号 * 2
+    push si     ; 保存原始主程序寄存器的值 
+    push cx    
 
+    ; 计划用 es:di 来定位要写入的显存缓冲区的首地址
+    mov al, 160
+    mul dh
+    mov bx, ax      ; 计算 160 * 行号保存到 bx 寄存器
+    mov al, 2
+    mul dl
+    add bx, ax      ; bx 此时 = 160 * 行号 + 2 * 列号
+    
     mov ax, 0b800h
-    mov es, ax   ; 初始化指向显示缓冲区的段地址保存到 es 寄存器
+    mov es, ax  ; es 保存要写入的显存缓冲区的段地址
+    mov di, 0
+    mov al, cl  ; al 存放颜色属性
 
-mov_str:
-    mov cl, [si] 
+change:
     mov ch, 0
-    jcxz ok         ; 判断是否已经读到 data 数据段字符串的末尾（即 0）
-    mov al, [si]
-    mov es:[bx], al   ; 将 data 数据段中的字符串赋值到显示缓冲区
-    add bx, 1
-    mov byte ptr es:[bx], 2
-    add bx, 1
+    mov cl, [si]    ; cl 存放源字符
+    jcxz ok         ; 如果源字符串遇到 0 则返回
+    mov es:[bx + di], cl    ; 将源字符存放到目标显存位置
+    mov es:[bx + di + 1], al    ; 将颜色属性存放到目标显存位置
+    add di, 2
     add si, 1
-    jmp short mov_str
+    jmp short change
 
 ok:
+    pop cx      ; 恢复原始主程序寄存器的值
+    pop si  
     ret
 
 code ends
@@ -82,7 +85,14 @@ code ends
 end main
 ```
 
+#### 参考链接：
+小甲鱼讲16位汇编：
+https://www.bilibili.com/video/BV1Rs411c7HG?p=52
+其中给了我一些启发。
+
 
 ## 总结
 今天主要复习了c指针，又有了深的理解；另外这个程序看来跑失败了~，焯！
 明天做修改对程序
+
+2022.5.20 11：45 终于完成了这个题目，也纠正了一些错误哈哈
