@@ -2,7 +2,7 @@
 
 ## 中间笔记
 ```shell
-# div 指令详细参考 P16
+# div 指令详细参考 P169
 # div 指令格式如下：
 div reg
 div 内存单元
