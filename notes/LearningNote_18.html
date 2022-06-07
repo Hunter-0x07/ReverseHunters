@@ -23,7 +23,7 @@
 			}
     </script>
     <title>7.12 王爽汇编语言（九） | ReverseHunters</title><meta name="description" content="逆向工程">
-    <link rel="modulepreload" href="/ReverseHunters/assets/app.136b957c.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_18.html.b7c15571.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_18.html.90ca3ab9.js"><link rel="modulepreload" href="/ReverseHunters/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="modulepreload" href="/ReverseHunters/assets/app.8845416f.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_18.html.53a88946.js"><link rel="modulepreload" href="/ReverseHunters/assets/LearningNote_18.html.12087713.js"><link rel="modulepreload" href="/ReverseHunters/assets/plugin-vue_export-helper.21dcd24c.js">
     <link rel="stylesheet" href="/ReverseHunters/assets/style.34f2fdae.css">
   </head>
   <body>
@@ -53,6 +53,6 @@ mov al, ds:<span class="token punctuation">[</span><span class="token number">0<
 mov al, <span class="token punctuation">[</span>bx<span class="token punctuation">]</span> <span class="token comment"># 之前的思路，使用寄存器 bx 保存内存单元的偏移地址</span>
 mov al, ds:<span class="token punctuation">[</span>bx<span class="token punctuation">]</span> <span class="token comment"># 跟上面类似，在我看来就是属于“脱了裤子放屁”（“脱下裤子放屁”：此话通常用来讥讽别人说话做事画蛇添足、多此一举。）</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>dos 方式下，我们如果要往一段内存里面写入内容时，就使用 0:200~0:2ff这段空间，一般来说这段空间是“安全的“；</p><h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2><p>学习了用 debug.exe 来调试 exe 可执行文件之后，我大概明白了为什么别人能逆向出源程序的动作了；因为之前由别的程序，比如 powershell.exe 加载的 exe 程序到内存，powershell 将 CPU 控制权直接交给 exe 程序；而平常的逆向 debug 工具，没有交出 CPU 控制权，所以可以单步调试下去；</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: dq1270291909@gmail.com">Hunter-0x07</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"><a href="/ReverseHunters/notes/LearningNote_17.html" class="" aria-label="7.11 王爽汇编语言（八）"><!--[--><!--]--> 7.11 王爽汇编语言（八） <!--[--><!--]--></a></span><span class="next"><a href="/ReverseHunters/notes/LearningNote_19.html" class="" aria-label="7.13 王爽汇编语言（十）"><!--[--><!--]--> 7.13 王爽汇编语言（十） <!--[--><!--]--></a></span></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
-    <script type="module" src="/ReverseHunters/assets/app.136b957c.js" defer></script>
+    <script type="module" src="/ReverseHunters/assets/app.8845416f.js" defer></script>
   </body>
 </html>
