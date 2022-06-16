@@ -48,10 +48,19 @@ olldbg 中下断点是 F2；
 lea（load effective address） 指令，取内存偏移地址，如 lea edi, dword ptr ss:[ebp-0x48]
 
 ```shell
-mov ecx, 0x10
-rep stos dword ptr es:[edi]
+rep（repeat）指令：重复执行该指令后面的汇编代码，执行次数由 ecx 控制。
+
+完整形式如下
+mov ecx, 0x10  ;; 首先给 ecx 赋值确定循环次数；
+rep stos dword ptr es:[edi]    ;; 然后循环 0x10（即16）次将 eax 值赋值给 es:[edi]，并且循环一次，edi 自增或自减一次，其由 DF 标志位决定（STOS 指令详情参考 7.43 免杀课程X86（一））；
 ```
-rep（repeat）指令：
+
+ESP（栈顶指针）（extended stack pointer: 英文直译为 扩展栈指针）
+EBP（栈底指针）（extended base pointer：英文直译为 扩展基址指针）
+外平栈：即在 call 调用结束以后再增加栈顶指针； 
+内平栈：即在 call 调用内通过 retn 指令来增加栈顶指针；
 
 ## 总结
 11:46 晚上如果有空的话做一下这个实验，顺便看一下 rep 指令，没空就明天，因为晚上要健身；
+
+2022.6.16 9:39 分开始继续学习；
